@@ -22,6 +22,8 @@ spec:
         tier: db
         project: expense
     spec:
+      securityContext:
+        fsGroup: 999 
       containers:
         - name: mysql
           image: acavinash/mysql:{{ .Values.statefulset.imageVersion }}
